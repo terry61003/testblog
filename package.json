@@ -14,7 +14,8 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js --progress --inline --colors --open",
     "build": "webpack --config webpack-production.config.js --progress --colors",
-    "deploy": "npm run build&&gh-pages -d build"
+    "deploy": "gh-pages-deploy",
+    "clean-source": "rimraf README.md src webroot package.json"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
@@ -27,6 +28,7 @@
     "eslint": "^3.11.1",
     "eslint-config-airbnb-base": "^10.0.1",
     "eslint-plugin-import": "^2.2.0",
+    "gh-pages-deploy": "^0.4.2",
     "style-loader": "^0.19.1",
     "webpack": "^1.13.3",
     "webpack-dev-server": "^1.16.2"
